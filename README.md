@@ -18,3 +18,7 @@ docker run --name debbie --network mired -ti debian
 docker volume create ejemplo
 ls -la /var/lib/docker/volumes/ejemplo/_data
 docker run -ti -v ejemplo:/misdatos centos
+
+# Docker ocmpose
+
+Install: https://docs.docker.com/compose/install/#install-compose
