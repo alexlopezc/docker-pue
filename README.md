@@ -28,7 +28,8 @@ docker run -ti -v ejemplo:/misdatos centos
 # Docker compose
 
 Install: https://docs.docker.com/compose/install/#install-compose
-Docker cmpose isempr eversion 3 para que sea compatible con SWRM
+
+Docker compose siempre eversion 3 para que sea compatible con SWRM
 
 docker run -d -e MYSQL_ROOT_PASSWORD=tupassword --name mibbdd mysql:5.7
 docker run --name some-wordpress --link mibbdd:mysql -p 8080:80 -d wordpress
@@ -40,7 +41,6 @@ docker-compose scale container-name=10
 
 # Docker swarm 
 
-E
 Creamos un cluster para decir que vamos a meterle con docker stack
 docker swarm init
 
@@ -50,7 +50,7 @@ docker swarm join-token manager
 Devuelve algo tal que así
 docker swarm join --token SWMTKN-1-290chska8oa8hw0egopwar2cv1y4n2lwjyf6ck1alcfy2oh6sn-b4dbarhz2gyqly2t17cr4z061 192.168.20.61:2377
 
-docker stack: Despliega el compose en el cluster
+ocker stack: Despliega el compose en el cluster
   docker stack deploy -c docker-compose.yml wp_stack
 
 docker services: Lista servicios del cluster
@@ -59,6 +59,8 @@ docker services: Lista servicios del cluster
   docker node ls
   docker service scale wp_stack_wordpress=3
   docker stack ls
+  
+  docker node update -->> Asigna labels para poder hacer deploy constraints 
   
 
 
