@@ -22,3 +22,5 @@ docker run -ti -v ejemplo:/misdatos centos
 # Docker ocmpose
 
 Install: https://docs.docker.com/compose/install/#install-compose
+Docker cmpose isempr eversion 3 para que sea compatible con SWRM
+
