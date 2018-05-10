@@ -14,4 +14,3 @@ ENTRYPOINT [ "/usr/sbin/apachectl", "-D", "FOREGROUND" ]
 
 
 
-# echo 'Yes, do as I say!'| apt-get -qq -y purge --force-yes $(dpkg -l | 
