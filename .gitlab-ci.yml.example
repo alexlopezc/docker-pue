@@ -1,0 +1,10 @@
+build:
+  image
+  services:
+  - docker:dind
+  stage: build
+  script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.swarmfloss.cat
+    - docker build -t registry.swarm.floss.cat/kpeiruza/docker-test:latest .
+    - docker push registry.swarm.floss.cat/kpeiruza/docker-test:latest
+  
