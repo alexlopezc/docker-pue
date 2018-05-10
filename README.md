@@ -24,3 +24,8 @@ docker run -ti -v ejemplo:/misdatos centos
 Install: https://docs.docker.com/compose/install/#install-compose
 Docker cmpose isempr eversion 3 para que sea compatible con SWRM
 
+docker run -d -e MYSQL_ROOT_PASSWORD=tupassword --name mibbdd mysql:5.7
+docker run --name some-wordpress --link mibbdd:mysql -p 8080:80 -d wordpress
+
+Se pueden usar variables de entorno entre container si se ha hecho link, ejemplo en wordpress docker
+
