@@ -46,10 +46,10 @@ Creamos un cluster para decir que vamos a meterle con docker stack
 docker swarm init
 
 Par saber como hacer join:
-docker swarm join-token manager
+  docker swarm join-token manager
 
 Devuelve algo tal que así
-docker swarm join --token SWMTKN-1-290chska8oa8hw0egopwar2cv1y4n2lwjyf6ck1alcfy2oh6sn-b4dbarhz2gyqly2t17cr4z061 192.168.20.61:2377
+  docker swarm join --token SWMTKN-1-290chska8oa8hw0egopwar2cv1y4n2lwjyf6ck1alcfy2oh6sn-b4dbarhz2gyqly2t17cr4z061 192.168.20.61:2377
 
 docker stack: Despliega el compose en el cluster
   docker stack deploy -c docker-compose.yml wp_stack
@@ -60,13 +60,13 @@ docker services: Lista servicios del cluster
   docker node ls
   docker service scale wp_stack_wordpress=3
   docker stack ls
-  
   docker node update -->> Asigna labels para poder hacer deploy constraints 
   
 
 Eliminar stack y redeploy:
-docker stack rm
+  docker stack rm name_service
 
+# Logs and Metrics
 
 logspout vs logsene para ge
 prometheus for metrics 
@@ -74,5 +74,7 @@ logz.io gestion de logs
 logz.io
 tick stack (InfluxDB)
 
+# Portainer 
 App portainer para desplegar containers
+https://github.com/portainer/portainer
 
