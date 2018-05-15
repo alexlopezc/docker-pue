@@ -39,6 +39,7 @@ Se pueden usar variables de entorno entre container si se ha hecho link, ejemplo
 docker-compose scale container-name=10
 
 
+
 # Docker swarm 
 
 Creamos un cluster para decir que vamos a meterle con docker stack
@@ -50,7 +51,7 @@ docker swarm join-token manager
 Devuelve algo tal que así
 docker swarm join --token SWMTKN-1-290chska8oa8hw0egopwar2cv1y4n2lwjyf6ck1alcfy2oh6sn-b4dbarhz2gyqly2t17cr4z061 192.168.20.61:2377
 
-ocker stack: Despliega el compose en el cluster
+docker stack: Despliega el compose en el cluster
   docker stack deploy -c docker-compose.yml wp_stack
 
 docker services: Lista servicios del cluster
@@ -63,6 +64,15 @@ docker services: Lista servicios del cluster
   docker node update -->> Asigna labels para poder hacer deploy constraints 
   
 
+Eliminar stack y redeploy:
+docker stack rm
 
+
+logspout vs logsene para ge
+prometheus for metrics 
+logz.io gestion de logs
+logz.io
+tick stack (InfluxDB)
 
 App portainer para desplegar containers
+
