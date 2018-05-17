@@ -587,5 +587,34 @@ Pruebas GitLab
 Pruebas Portus
 
 
+DS automatico con consul de los nuevos servicios levantados
+
+apt install bind9
+root@node2:/etc/bind# cat /etc/bind/named.conf.local 
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+zone "consul" {
+	type forward;
+	forward only;
+	forwarders {
+		127.0.0.1 port 8600;
+	};
+};
+
+root@node2:/etc/bind# cat /etc/docker/
+daemon.json  key.json     
+
+root@node2:/etc/bind# cat /etc/docker/daemon.json 
+{
+	"dns": [ "192.168.20.62" ]
+}
+
+
 
 
