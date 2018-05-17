@@ -1,0 +1,64 @@
+root@node2:/etc/bind# history
+    1  init 0
+    2  apt-get update
+    3  apt-get -y upgrade
+    4  apt-get -y install apt-transport-https ca-certificates curl software-properties-common
+    5  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+    6  add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+    7  apt-get update
+    8  apt-get -y install docker-ce
+    9  usermod -aG docker ubuntu
+   10  mkdir /etc/telegraf
+   11  vi /etc/telegraf/telegraf.conf
+   12  docker swarm leave
+   13  docker node demote
+   14  docker node demote node2
+   15  docker swarm leave 
+   16  poweroff
+   17  docker swarm join --token SWMTKN-1-290chska8oa8hw0egopwar2cv1y4n2lwjyf6ck1alcfy2oh6sn-b4dbarhz2gyqly2t17cr4z061 192.168.20.61:2377
+   18  docker swarm leave
+   19  docker swarm leave --force
+   20  docker run -d --net=host -e 'CONSUL_LOCAL_CONFIG={"skip_leave_on_interrupt": true}' consul agent -server -bind=192.168.20.201 -client=0.0.0.0 -ui  -bootstrap
+   21  docker ps
+   22  docker ps -a
+   23  docker logs gifted_hypatia
+   24  docker rm -f gifted_hypatia
+   25  docker run -d --net=host -e 'CONSUL_LOCAL_CONFIG={"skip_leave_on_interrupt": true}' consul agent -server -bind=192.168.20.133 -client=0.0.0.0 -ui  -bootstrap
+   26  docker logs *
+   27  docke rps
+   28  docker ps
+   29  docker ps -a
+   30  docker logs blissful_wescoff
+   31  docker rm -f blissful_wescoff
+   32  docker run -d --net=host -e 'CONSUL_LOCAL_CONFIG={"skip_leave_on_interrupt": true}' consul agent -server -bind=192.168.20.62 -client=0.0.0.0 -ui  -bootstrap
+   33  docker ps -a
+   34  docker service ls
+   35  docker ps
+   36  apt install bind9
+   37  cd /etc/bind/
+   38  vi named.conf.options 
+   39  vi named.conf.local 
+   40  named-checkconf 
+   41  service bind9 restart
+   42  ip -4 addr
+   43  vi /etc/docker/daemon.json
+   44  service docker restart
+   45  docker run -ti debian
+   46  docker run -ti centos
+   47  vi named.conf.options 
+   48  service bind9 restart
+   49  docker run -ti centos
+   50  host consul.service.dc1.consul localhost
+   51  host -t A consul.service.dc1.consul localhost
+   52  tail /var/log/syslog 
+   53  lsof -ni:8600
+   54  lsof -ni:8500
+   55  docker ps
+   56  docker run -d --net=host -e 'CONSUL_LOCAL_CONFIG={"skip_leave_on_interrupt": true}' consul agent -server -bind=192.168.20.62 -client=0.0.0.0 -ui  -bootstrap
+   57  docker run -d --name=registrator --net=host --volume=/var/run/docker.sock:/tmp/docker.sock gliderlabs/registrator:latest -ip=192.168.20.62 consul://192.168.20.62:8500
+   58  host -t A consul.service.dc1.consul localhost
+   59  docker run -ti centos
+   60  cat /etc/bind/named.conf.local 
+   61  cat /etc/docker/daemon.json 
+   62  history
+   63  docker run -ti centos
