@@ -1,0 +1,53 @@
+   1  init 0
+    2  loadkeys es
+    3  vi /etc/network/interfaces
+    4  ip addr
+    5  ip address del 192.168.20.164/24 dev enp0s3
+    6  ifup enp0s3
+    7  vi /etc/network/interfaces
+    8  ifup enp0s3
+    9  rm /etc/resolv.conf 
+   10  vi /etc/resolv.conf
+   11  reboot
+   12  ./install-docker.sh 
+   13  docker swarm join --token SWMTKN-1-290chska8oa8hw0egopwar2cv1y4n2lwjyf6ck1alcfy2oh6sn-b4dbarhz2gyqly2t17cr4z061 192.168.20.61:2377
+   14  mkdir /srv/nfs
+   15  mount -a
+   16  ls
+   17  cd co
+   18  ls
+   19  docker pull php:7.0-apache
+   20  hostnamectl set-hostname  node3
+   21  docker services ls
+   22  docker service ls
+   23  docker service ps
+   24  mkdir /etc/telegraf
+   25  vi /etc/telegraf/telegraf.conf
+   26  docker swarm
+   27  docker swarm leave
+   28  docker swarm leave --foce-new-cluster
+   29  docker node demote
+   30  docker node 
+   31  docker node demote
+   32  docker node demote node3
+   33  docker swarm leave
+   34  poweroff
+   35  docker swarm join --token SWMTKN-1-290chska8oa8hw0egopwar2cv1y4n2lwjyf6ck1alcfy2oh6sn-b4dbarhz2gyqly2t17cr4z061 192.168.20.61:2377
+   36  ping node2
+   37  ping node3
+   38  hostname
+   39  docker swarm join --token SWMTKN-1-290chska8oa8hw0egopwar2cv1y4n2lwjyf6ck1alcfy2oh6sn-b4dbarhz2gyqly2t17cr4z061 192.168.20.61:2377
+   40  docker node ls
+   41  docker service ls
+   42  docker swarm join-token manager
+   43  docker swarm leave
+   44  docker mr registrator
+   45  docker rm registrator
+   46  docker ps
+   47  docker ps -a
+   48  docker ps
+   49  docker ps -a
+   50  docker ps -a | grep registry
+   51  docker ps -a | grep registrator
+   52  docker logs registrator
+   53  docker rm registrator
