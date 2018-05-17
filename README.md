@@ -92,3 +92,10 @@ tig stack
 App portainer para desplegar containers
 https://github.com/portainer/portainer
 
+
+CD/OS Mesos
+Consul, consul-template y registrator -> para descubrir containers i publicarlos en dns
+
+https://gtd-docker.pad.floss.cat/p/swarm
+https://gtd-docker.pad.floss.cat/p/pconsul
+
