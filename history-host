@@ -1,0 +1,134 @@
+   1  apt purge network-manager
+    2  vim /etc/network/interfaces.d/eno1
+    3  killall dhclient
+    4  ip -4 addr 
+    5  ip -4 addr del 192.168.20.248/24 dev eno1
+    6  ifup eno1
+    7  ip -4 addr 
+    8  echo nameserver 192.168.20.30 > /etc/resolv.conf
+    9  vim /etc/network/interfaces.d/eno1
+   10  vim /etc/network/interfaces.d/eno1
+   11  cat /etc/resolv.conf 
+   12  ssh 192
+   13  ssh ubuntu@192.168.20.61
+   14  apt install curl
+   15  curl -sk http://localhost:49160/
+   16  curl -sk http://192.168.20.61:49160/
+   17  curl -sk http://192.168.20.61:49161/
+   18  echo $?
+   19  curl -sk http://192.168.20.61:49160/
+   20  echo $?
+   21  ssh ubuntu@192.168.20.61
+   22  exit
+   23  ssh ubuntu@192.168.20.63
+   24  exit
+   25  ssh ubuntu@192.168.20.61
+   26  ssh ubuntu@192.168.20.61
+   27  ssh ubuntu@192.168.20.63
+   28  apt-get install terminator
+   29  terminator 
+   30  ssh ubuntu@192.168.20.62
+   31  ssh ubuntu@192.168.20.61
+   32  ssh ubuntu@192.168.20.62
+   33  apt-get install nfs-kernel-server
+   34  mkdir /srv/nfs
+   35  chown nobody:nogroup /srv/nfs/
+   36  vi /etc/exports 
+   37  service nfs-server start
+   38  ip addr
+   39  service nfs-server-restart
+   40  service nfs-server restart
+   41  vi /etc/exports 
+   42  ls /srv/
+   43  mount
+   44  chmod 1777 /srv/nfs/
+   45  service nfs-server restart
+   46  ls -la /srv/nfs/
+   47  ls -la /srv/
+   48  touch /srv/nfs/hello.world 
+   49  apt-get install nginx
+   50  mkdir /srv/nfs/db
+   51  mkdir /srv/nfs/uploads
+   52  ls -la /srv/nfs/db/
+   53  ls -la /srv/nfs/db/
+   54  ls -la /srv/nfs/
+   55  ls -la /srv/nfs/db/
+   56  vi /etc/exports 
+   57  exportfs -r
+   58  ls -la /srv/nfs/db/
+   59  ls -la /srv/nfs/db/
+   60  ls -la /srv/nfs/
+   61  rm /srv/nfs/hello.world 
+   62  chmod 177 -R /srv/nfs/
+   63  chmod 1777 -R /srv/nfs/
+   64  ls -la /srv/nfs/
+   65  chown root:root -R /srv/nfs/
+   66  ls -la /srv/nfs/
+   67  ls -la /srv/nfs/db/
+   68  rm -rf  /srv/nfs/db/ibdata1 
+   69  chmod 777 /srv/nfs/
+   70  chmod 777 -R /srv/nfs/
+   71  mkdir /srv/nfs/miweb
+   72  chmod 777 -R /srv/nfs/
+   73  vi /srv/nfs/miweb/index.php
+   74  vi /srv/nfs/miweb/index.php
+   75  vi /etc/nginx/
+   76  vim /etc/nginx/sites-available/default 
+   77  service nginx restart
+   78  vim /etc/nginx/sites-available/default 
+   79  service nginx restart
+   80  systemctl status nginx.service
+   81  journalctl -xe
+   82  cat /var/log/nginx/error.log 
+   83  tail -f /var/log/nginx/error.log 
+   84  vim /etc/nginx/sites-available/default 
+   85  service nginx restart
+   86  mkdir /srv/nfs/tig/grafana -p
+   87  mkdir /srv/nfs/tig/influxdb
+   88  mkdir /srv/nfs/tig/influxdb/data
+   89  mkdir -p /srv/nfs/metrics/influxdb/data
+   90  mkdir -p /srv/nfs/metrics/influxdb/config
+   91  mkdir -p /srv/nfs/metrics/grafana/data
+   92  chmod 777 -R /srv/nfs 
+   93  vi /srv/nfs/metrics/influxdb/config/influxdb.conf
+   94  vi /srv/nfs/metrics/influxdb/config/influxdb.conf
+   95  gedit /srv/nfs/metrics/influxdb/config/influxdb.conf
+   96  vi /srv/nfs/metrics/influxdb/config/influxdb.conf
+   97  vi /etc/telegraf.conf
+   98  mkdir /etc/telegraf
+   99  vi /etc/telegraf/telegraf.conf
+  100  chown 742:742 /srv/nfs/metrics/grafana/data/
+  101  chmod 750:750 /srv/nfs/metrics/grafana/data/
+  102  chmod 750 /srv/nfs/metrics/grafana/data/
+  103  rm /etc/telegraf/telegraf.conf
+  104  vi /etc/telegraf/telegraf.conf
+  105  cat /etc/telegraf/telegraf.conf
+  106  :q1
+  107  service nfs-server restart
+  108  mkdir /srv/nfs/portainer/portainer/data
+  109  mkdir /srv/nfs/portainer/portainer/data -p
+  110  vi /etc/docker/daemon.json
+  111  ip addr
+  112  vi /etc/docker/daemon.json
+  113  service docker restart
+  114  service dockerd restart
+  115  service docker restart
+  116  $ docker run -d -p 5000:5000 --restart=always --name registry registry:2
+  117  $ docker run -d -p 5000:5000 --restart=always --name registry registry:2
+  118  docker run -d -p 5000:5000 --restart=always --name registry registry:2
+  119  apt-get update
+  120   apt-get install     apt-transport-https     ca-certificates     curl     software-properties-common
+  121  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  122  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+  123  apt-key fingerprint 0EBFCD88
+  124  add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+  125     $(lsb_release -cs) \
+  126     stable
+  127  "
+  128  apt-get update
+  129  vi install-docker.sh
+  130  chmod +x install-docker.sh 
+  131  ./install-docker.sh 
+  132  docker
+  133  uname -a
+  134  history
