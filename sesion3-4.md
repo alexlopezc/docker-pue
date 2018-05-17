@@ -589,6 +589,8 @@ Pruebas Portus
 
 DS automatico con consul de los nuevos servicios levantados
 
+
+
 apt install bind9
 root@node2:/etc/bind# cat /etc/bind/named.conf.local 
 //
