@@ -1,0 +1,401 @@
+root@node1:~# history 
+    1  init 0
+    2  cd /root/
+    3  ls
+    4  cd compose_wp/
+    5  vi docker-compose.yml 
+    6  docker-compose down
+    7  sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+    8  sudo chmod +x /usr/local/bin/docker-compose
+    9  docker-compose --version
+   10  mkdir miprimercompose
+   11  cd miprimercompose
+   12  vi docker-compose.yml
+   13  ci Dockerfile
+   14  vi Dockerfile
+   15  mkdir code
+   16  vi app.py
+   17  docker-compose up
+   18  ls 
+   19  cd ..
+   20  mkdir compose_wp
+   21  cd compose_wp/
+   22  vi docker-compose.yml
+   23  docker-compose up -d
+   24  docker s
+   25  docker ps
+   26  docker logs compose_wp_wordpress_1
+   27  curl http://localhost:32770
+   28  curl http://localhost:8080
+   29  docker-compose down
+   30  docker-compose up
+   31  pwd
+   32  docker-compose down
+   33  vi docker-compose.yml 
+   34  docker-compose down
+   35  vi docker-compose.yml 
+   36  docker-compose down
+   37  vi docker-compose.yml 
+   38  docker-compose up
+   39  vi docker-compose.yml 
+   40  docker-compose up
+   41  vi docker-compose.yml 
+   42  docker-compose up
+   43  docker-compose up -d
+   44  docker-compose down
+   45  docker-compose up -d
+   46  docker volumes ls
+   47  docker volume ls
+   48  docker network ls
+   49  vi docker-compose.yml 
+   50  docker swarm init
+   51  docker swarm join-token manager
+   52  vi /etc/network/interfaces
+   53  docker ps -a
+   54  docker rm -f 17fd5bb0cee2 319be189e74e
+   55  docker rm -f f5ce55aab0d2 2e067915cb07
+   56  apt install nfs-common
+   57  service rpcbind restart
+   58  vi /etc/fstab 
+   59  :wq!
+   60  :q!
+   61  sudo :q!
+   62  q!
+   63  sudo vi /etc/fstab 
+   64  mount
+   65  mount /srv/nfs
+   66  sudo vi /etc/fstab 
+   67  mount -a
+   68  vi /etc/fstab 
+   69  mount -a
+   70  vi /etc/fstab 
+   71  mount -a
+   72  mkdir /srv/nfs
+   73  mount -a
+   74  ls /srv/nfs/
+   75  ls
+   76  cd compose_wp/
+   77  ls
+   78  la
+   79  vi docker-compose.yml 
+   80  docker service ls
+   81  docker service --help
+   82  vi docker-compose.yml 
+   83  docker node ls
+   84  docker stack rm
+   85  docker stack rm wp_stack
+   86  docker stack deploy -c docker-compose.yml wp_stack
+   87  docker logs wp_stack_db
+   88  docker node ls
+   89  docker service ls
+   90  docker logs wp_stack_db
+   91  docker service logs wp_stack
+   92  docker service logs wp_stack_db
+   93  vi docker-compose.yml 
+   94  docker service ls
+   95  docker volumes ls
+   96  docker volume ls
+   97  docker volume --help
+   98  docker volume inspect wp_stack_db_data
+   99  ls /var/lib/docker/volumes/wp_stack_db_data/_data
+  100  docker stack rm wp_stack
+  101  vi docker-compose.yml 
+  102  docker stack deploy -c docker-compose.yml wp_stack
+  103  vi docker-compose.yml 
+  104  docker stack rm wp_stack
+  105  docker stack deploy -c docker-compose.yml wp_stack
+  106  docker service logs wp_stack_db
+  107  docker service ls
+  108  docker stack rm wp_stack
+  109  vi docker-compose.yml 
+  110  docker stack deploy -c docker-compose.yml wp_stack
+  111  docker service logs wp_stack_db
+  112  docker service ls
+  113  docker service logs wp_stack_wordpress
+  114  docker stack rm wp_stack
+  115  docker stack deploy -c docker-compose.yml wp_stack
+  116  vi docker-compose.yml 
+  117  docker service logs wp_stack_wordpress
+  118  docker service ls
+  119  docker stack deploy -c docker-compose.yml wp_stack
+  120  docker service ls
+  121  docker service logs wp_stack_wordpress
+  122  docker service logs wp_stack_db
+  123  docker stack rm wp_stack
+  124  docker stack deploy -c docker-compose.yml wp_stack
+  125  vi docker-compose.yml 
+  126  docker stack rm wp_stack
+  127  docker stack deploy -c docker-compose.yml wp_stack
+  128  docker stack rm wp_stack
+  129  docker stack deploy -c docker-compose.yml wp_stack
+  130  vi docker-compose.yml 
+  131  docker stack deploy -c docker-compose.yml wp_stack
+  132  docker service ls
+  133  docker service scale wp_stack_wordpress=1
+  134  docker service ls
+  135  docker service scale wp_stack_wordpress=1
+  136  docker stack rm wp_stack
+  137  docker stack deploy -c docker-compose.yml wp_stack
+  138  docker service ls
+  139  docker service scale wp_stack_wordpress=1
+  140  docker service logs wp_stack_db
+  141  docker service logs wp_stack_wordpress
+  142  docker service logs wp_stack_db
+  143  docker service logs wp_stack_wordpress
+  144  docker pull php:7.0-apache
+  145  docker stack rm wp_stack
+  146  cd ..
+  147  vi cluser-web.yaml
+  148  vi index.html
+  149  ls
+  150  docker stack deploy -c ./cluster-web.yaml miweb
+  151  docker stack deploy -c cluster-web.yaml miweb
+  152  vi cluser-web.yaml 
+  153  mkdir miweb
+  154  mv cluser-web.yaml miweb/
+  155  cd miweb/
+  156  ls
+  157  mv cluser-web.yaml miweb.yamlwq
+  158  mv miweb.yaml miweb.yaml
+  159  ls
+  160  mv miweb.yamlwq miweb.yaml
+  161  docker stack deploy -c miweb.yaml miweb
+  162  docker service ls
+  163  docker service scale miweb_web=5
+  164  docker free -m
+  165  free
+  166  cd ..
+  167  mkdir tig-stack
+  168  vi docker-compose.yaml
+  169  rm docker-compose.yaml 
+  170  vi docker-compose.yaml
+  171  docker stack rm *
+  172  docker service ls
+  173  hostname
+  174  vi /etc/hostname 
+  175  vi /etc/hosts
+  176  docker stack deploy -c miweb.yaml miweb
+  177  docker stack deploy -c miweb/miweb.yaml miweb
+  178  docker services ls
+  179  docker service ls
+  180  docker service scale miweb_web=5
+  181  docker service ls
+  182  docker service ps
+  183  docker service ps miweb_web
+  184  docker node ls
+  185  docker service ps miweb_web
+  186  docker service scale miweb_web=10
+  187  docker node ls
+  188  docker service ps miweb_web
+  189  ls
+  190  cd tig-stack/
+  191  ls
+  192  vi tig.yaml
+  193  cat tig.yaml | grep srv
+  194  vi tig.yaml
+  195  docker stack rm *
+  196  docker stack rm miweb_ewb
+  197  docker stack rm miweb_web
+  198  docker services ls
+  199  docker service ls
+  200  docker stack rm miweb_web
+  201  docker stack rm miweb
+  202  vi tig.yaml 
+  203  docker stack deploy -c tig.yaml tig
+  204  docker service ls
+  205  vi tig.yaml 
+  206  docekr stack rm tig
+  207  docker stack rm tig
+  208  docker stack deploy -c tig.yaml tig
+  209  docker stack rm tig
+  210  vi tig.yaml 
+  211  docker stack deploy -c tig.yaml tig
+  212  mkdir /etc/telegraf
+  213  vi /etc/telegraf/telegraf.conf
+  214  docker stack rm tig
+  215  docker stack deploy -c tig.yaml tig
+  216  vi telegraf.yaml
+  217  docker stack deploy -c telegraf.yaml telegraf
+  218  vi telegraf.yaml
+  219  gedit telegraf.yaml 
+  220  vi telegraf.yaml 
+  221  docker stack deploy -c telegraf.yaml telegraf
+  222  vi telegraf.yaml 
+  223  docker stack deploy -c telegraf.yaml telegraf
+  224  docker stack rm telegraf
+  225  vi tig.yaml 
+  226  docker stack rm tig
+  227  docker stack deploy -c tig.yaml tig
+  228  docker service logs tig_telegraf
+  229  docker service ls
+  230  docker service ps
+  231  docker service ps tig
+  232  docker service ps tig_telegraf
+  233  vi tig.yaml 
+  234  docker service ps tig_telegraf
+  235  docker service logs tig_telegrag
+  236  docker service ps tig_telegrag
+  237  docker service ps tig_telegraf
+  238  docker service logs tig_telegraf
+  239  docker service ls
+  240  docker service logs tig_influxdb
+  241  docker service logs tig_telegraf
+  242  date
+  243  docker service ls
+  244  docker service ps
+  245  docker service
+  246  docker service ps
+  247  docker service ps tig
+  248  docker service ps 
+  249  docker service ls
+  250  docker stack rm tig
+  251  docker service
+  252  docker swarm
+  253  docker node ls
+  254  docker node demote node3
+  255  docker node demote node2
+  256  docker node ls
+  257  docker node
+  258  docker node ls
+  259  docker node ps
+  260  docker node ls
+  261  docker swarm
+  262  poweroff
+  263  docker node ls
+  264  docker node promote node1
+  265  docker swarm join-token manager
+  266  docker node ls
+  267  docker node 
+  268  docker node rm node70.swarm.lan
+  269  docker node ls
+  270  docker node rm ubuntu
+  271  docker node demote ubuntu
+  272  docker node rm ubuntu
+  273  docker node ls
+  274  docker node 
+  275  docker node demote ubuntu
+  276  docker node rm ubuntu
+  277  docker node rm ubuntu --force
+  278  docker node ls
+  279  vi portainer.yaml
+  280  docker node inspect zqa78o4d7ivhumk9ngks9zrej
+  281  docker node demote zqa78o4d7ivhumk9ngks9zrej
+  282  docker node promote zqa78o4d7ivhumk9ngks9zrej
+  283  docker node ls
+  284  docker node rm zqa78o4d7ivhumk9ngks9zrej --force
+  285  docker node demote zqa78o4d7ivhumk9ngks9zrej
+  286  docker node rm zqa78o4d7ivhumk9ngks9zrej --force
+  287  docker node ls
+  288  docker node inspect ocb0o9en5ztplyq088i7ufz2w
+  289  docker node rm ocb0o9en5ztplyq088i7ufz2w --force
+  290  docker node demote ocb0o9en5ztplyq088i7ufz2w 
+  291  docker node rm ocb0o9en5ztplyq088i7ufz2w --force
+  292  docker node ls
+  293  docker node demote fh7sferjzz52axqkosaeorvgx
+  294  docker node rm fh7sferjzz52axqkosaeorvgx --force
+  295  docker node ls
+  296  docker stack deploy -c portainer.yaml portainer
+  297  vi portainer.yaml 
+  298  docker stack deploy -c portainer.yaml portainer
+  299  vi portainer.yaml 
+  300  docker stack deploy -c portainer.yaml portainer
+  301  vi portainer.yaml 
+  302  docker stack deploy -c portainer.yaml portainer
+  303  docker service ls
+  304  docker service
+  305  docker stack rm vallestack
+  306  docker service
+  307  docker service ls
+  308  docker service logs portainer_portainer
+  309  docker stack rm portainer
+  310  vi portainer.yaml 
+  311  docker stack deploy -c portainer.yaml portainer
+  312  docker service ls
+  313  docker service 
+  314  docker service logs portainer_portainer
+  315  docker service ls
+  316  docker ps
+  317  docker ps -a
+  318  docker stack rm portainer
+  319  vi portainer.yaml 
+  320  docker stack deploy -c portainer.yaml portainer
+  321  docker service logs portainer_portainer
+  322  docker service logs portainer_portainer -f
+  323  docker ps -a
+  324  docker ps 
+  325  docker service ls
+  326  docker service ps
+  327  docker service
+  328  docker service ps portainer
+  329  docker service ps portainer_portainer
+  330  docker ps
+  331  docker node ps node1
+  332  docker node ps node2
+  333  docker node ps node3
+  334  docker service ls
+  335  vi portainer.yaml 
+  336  docker stack rm portainer
+  337  docker stack deploy -c portainer.yaml portainer
+  338  docker service ls
+  339  docker service logs portainer_portainer -f
+  340  docker service ls
+  341  vi portainer.yaml 
+  342  docker stack rm portainer
+  343  docker stack deploy -c portainer.yaml portainer
+  344  docker service ls
+  345  docker stack rm portainer
+  346  docker stack deploy -c portainer.yaml portainer
+  347  vi elk.yaml 
+  348  docker stack deploy -c elk.yaml elk
+  349  docker service ls
+  350  docker stack rm portainer
+  351  docker stack deploy -c portainer.yaml portainer
+  352  docker serce ls
+  353  docker service ls
+  354  docker stack rm elk
+  355  docker service ls
+  356  vi elk.yaml 
+  357  docker stack deploy -c elk.yaml elk
+  358  docker service logs portainer_portainer -f
+  359  docker service ls
+  360  docker stack deploy -c portainer.yaml portainer
+  361  docker service ls
+  362  sysctl -w vm.max_map_count=262144
+  363  docker stack rm elk
+  364  docker stack deploy -c elk.yaml elk
+  365  apt-get update
+  366  docker run -d -p 5000:5000 --restart=always --name registry registry:2
+  367  docker pull ubuntu:16.04
+  368  docker tag ubuntu:16.04 localhost:5000/my-ubuntu
+  369  docker push localhost:5000/my-ubuntu
+  370  docker image remove ubuntu:16.04
+  371  docker image remove localhost:5000/my-ubuntu
+  372  docker pull localhost:5000/my-ubuntu
+  373  docker service ls
+  374  docker swarm join-token manager
+  375  docker swarm init
+  376  docker swarm join-token manager
+  377  docker swarm leave
+  378  docker swarm leave --force-new-cluster
+  379  docker swarm init --force-new-cluster
+  380  docker swarm join-token manager
+  381  docker node ls
+  382  docker node rm -f v50je4floe8ksu227a0fq51bb
+  383  docker node rm pxjvuv1vgw535azmj9fkpsq2b
+  384  docker node ls
+  385  docker service ls
+  386  docker ps -a
+  387  docker logs registrator
+  388  docker rm registrator
+  389  docker ps -a
+  390  docker ps 
+  391  docker run -d --name webpersonal -P nginx
+  392  docker run -d -e SERVICE_NAME=webmama  --name webmama -P nginx
+  393  dig SRV -p 8600 @localhost webmama.service.dc1.consul +short
+  394  docker ps
+  395  docker run -d --name=registrator --net=host --volume=/var/run/docker.sock:/tmp/docker.sock gliderlabs/registrator:latest -ip=192.168.20.61 consul://192.168.20.62:8500
+  396  docker logs 48bc14b253810ea9f388ecb0e131abb8deb1f07cec7c381e7bf417c60ceddc3d
+  397  docker ps
+  398  docker rm -f registrator
+  399  docker run -d --name=registrator --net=host --volume=/var/run/docker.sock:/tmp/docker.sock gliderlabs/registrator:latest -ip=192.168.20.61 consul://192.168.20.62:8500
+  400  docker run -ti centos
